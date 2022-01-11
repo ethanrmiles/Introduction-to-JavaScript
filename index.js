@@ -36,6 +36,15 @@ Do the following:
    HINT: no function required
 */
 
+let variableA = 0 
+let variableB = 1
+
+if(variableB === 1){
+  variableA = 3
+}
+
+console.log(variableA)
+
 
 
 
@@ -50,7 +59,8 @@ Do the following:
 
    HINT: look up the Number method
 */
-
+let stringVar = '1999'
+console.log(Number(stringVar));
 
 
 
@@ -81,9 +91,10 @@ Do the following:
  3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-  /*add your code here*/
+function dogYears(age){
+   console.log(age * 7)
 }
+console.log(dogYears(21));
 
 
 
