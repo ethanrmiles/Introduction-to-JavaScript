@@ -177,11 +177,54 @@ RULES OF THE GAME: Scissors beats Paper | Paper beats Rock | Rock beats Scissors
 
 HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
+const computer = () => {
+  const randomNumber = Math.floor(Math.random() * 3)
+  if (randomNumber === 0){
+    return 'rock'
+  }else if (randomNumber === 1){
+    return 'paper'
+  }else if (randomNumber === 2){
+    return 'scissors'
+  }
+};
+
+const user = userInput => {
+  if (userInput === 'rock' || userInput === 'paper' || userInput === 'scissors'){
+    return userInput
+  }
+};
+
 
 function game(user, computer){
-  /*add your code here*/
-}
+  if (user === computer){
+    return "it's a tie"
+  }
+  if (user === 'rock'){
+    if (computer === 'paper'){
+      return 'you lose!'
+    } else {
+      return 'you win!'
+    }
+  }
 
+  if (user === 'paper'){
+    if (computer === 'scissors'){
+      return 'you lose!'
+    } else {
+      return 'you win!'
+    }
+  }
+
+  if (user === 'scissors'){
+    if (computer === 'rock'){
+      return 'you lose!'
+    } else {
+      return 'you win!'
+    }
+  }
+};
+
+console.log(game('rock', computer))
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -195,10 +238,10 @@ Using the miles function below do the following:
 3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
-  /*add your code here*/
+function miles(kilometers){
+ return kilometers * 0.621;
 }
-
+console.log(miles(7))
 
 
 //Task 5b - Feet to CM
@@ -209,10 +252,10 @@ Using the feet function below do the following:
 3. Return number of feet
 */
 
-function feet(/*add your code here*/){
-  /*add your code here*/
+function feet(cm){
+  return cm * .032
 }
-
+console.log(feet(100))
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
